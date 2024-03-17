@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saw Yu Yadanar's Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/25af5805b9.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+</head>
+<body onload="animateIcon()">
+    <!--Cover/ Home-->
+    <section id="cover">
+        <header class="nav-box">
+            <nav>
+                <img class="logo" src="images/catLogo.png" alt="This is the logo of the resume." width="70px" height="70px">
+                <ul id="menu-list">
+                    <li><a class ="nav-link" href="#cover">Home</a></li>
+                    <li><a class ="nav-link" href="#summary">Summary</a></li>
+                    <li><a class ="nav-link" href="#about">About</a></li>
+                    <li><a class ="nav-link" href="#portfolio">Porfolio</a></li>
+                    <li><a class ="nav-link" href="#contact">Contact</a></li>
+                    <i class="fa-regular fa-rectangle-xmark" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+            </nav>
+        </header>
+        <main class="container">
+            <div class="cover-text">
+                <h2>Hello! This is Saw,<br><span>a software engineering student</span><br><span>
+                    passionate about designing and creating website and software</span></h2>
+               
+                <a href="my-resume.docx" download class="btn">Download Resume</a>
+            </div>
+            <div class="cover-photo">
+                <img src="images/profile2.jpg" alt="This is the cover photo of the resume.">
+            </div>
+    
+        </main>
+    </section>
+
+    <!--Summary-->
+    <section id="summary">
+        <div class="col-1">
+            <img src="images/female-programmer.svg" alt="Profile picture.">
+        </div>
+
+        <div class="col-2">
+            <h1>Summary</h1>  
+            <p>A dedicated penultimate year computer science student with a passion for working as a software and web developer. 
+                Academically, I have achieved high distinctions in every single unit, such as programming principles unit using Python, 
+                applications development unit using Ruby and Ruby on Rails, mobile applications development using Lua, 
+                and Systems analysis and design unit.</p>
+            
+            <p>At the same time, I am self-studying some Front-end technologies and working on my own projects 
+                using HTML, CSS, JavaScript, and React JS.</p>
+                
+            <p>It is with great enthusiasm that I would like to apply for an internship position, where I can apply 
+                my knowledge and skills to real-world projects and I can grow and continue learning from my experienced 
+                seniors. </p>
+
+        </div>
+    </section>
+
+    <!--About-->
+    <section id="about">
+        <div class="col-2">
+            <h1>About</h1>
+            <ul class="about-list">
+                <li class="list-item" onclick="showDetails('skill')">Skills</li>
+                <li class="list-item" onclick="showDetails('education')">Education</li>
+                <li class="list-item" onclick="showDetails('project')">Project</li>
+                <li class="list-item" onclick="showDetails('employment')">Past Employment</li>
+            </ul>
+
+            <div class="item-content active-content" id="skill">
+                <ul class="skill-list">
+                    <li><b>Frontend Technologies:</b> HTML, CSS, Javascript, React </li>
+                    <li><b>Bankend Technologies:</b> Python, C++ </li>
+                    <li><b>Other Technologies:</b> Microsoft SQL Server, Git</li>
+                    <li><b>Soft Skills:</b> Teamwork, Problem solving</li>
+                </ul>
+            </div>
+
+            <div id="education" class="item-content">
+                <table class="education-list">
+                    <tr>
+                        <th>Qualification</th>
+                        <th>University</th>
+                        <th>Country of Qualification</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>Bachelor of Computer Science</td>
+                        <td>Edith Cowan University</td>
+                        <td>Australia</td>
+                        <td>Current Student (Penultimate year)</td>
+                    </tr>
+                    <tr>
+                        <td>Abe level 5: Diploma in Business Management</td>
+                        <td>Strategy First Univerity</td>
+                        <td>Myanmar</td>
+                        <td>Completed in 2020</td>
+                    </tr>
+                    <tr>
+                        <td>Bachelor of Arts (Chinese)</td>
+                        <td>Yangon University of Foreign Languages</td>
+                        <td>Myanmar</td>
+                        <td>Completed in 2019</td>
+                    </tr>
+                </table>                
+            </div>
+
+            <div id="project" class="item-content">
+                <table class="project-list">
+                    <tr>
+                        <th>Project Name</th>
+                        <th>Summary</th>
+                    </tr>
+                    <tr>
+                        <td>Resume website</td>
+                        <td>A responsive portfolio website using HTML, CSS and JavaScript</td>
+                    </tr>
+                    <tr>
+                        <td>To-do list app</td>
+                        <td>A simple task manager to manage tasks using HTML, CSS and JavaScript</td>
+                    </tr>
+                    <tr>
+                        <td>Social media app</td>
+                        <td>An UI design for a social media app using React JS</td>
+                    </tr>
+                </table>              
+            </div>
+
+            <div id="employment" class="item-content">
+                <ul>
+                    <li class="em-item em-item-one" onclick="showEmployment('employment-one')">Sales Assistant (05/2020 - 11/2021)</li>
+                    <li class="em-item em-item-two" onclick="showEmployment('employment-two')">Wait Staff (11/2022 - 06/2023)</li>
+                </ul> 
+        
+                <div id="employment-one" class="employment-details">
+                    <header><h2>Sales Assistant (Yee Shin Company, Bago Branch, Myanmar)</h2></header>
+                    <main>
+                        <h3>Responsibilities</h3>
+                        <ul>
+                            <li>Assisting customers in locating products, answering inquiries, and providing accurate product information.</li>
+                            <li>Managing return and refund procedures, making sure that customers’ concerns are addressed promptly according to the company policies.</li>
+                            <li>Dealing with customers’ inconveniences professionally to achieve customer satisfaction and to promote sales.</li>
+                            <li>Checking stock levels and managing restocking procedures.</li>
+                        </ul>  
+                    </main>
+                </div>
+                
+                <div id="employment-two" class="employment-details">
+                    <header><h2>Wait Staff (Palsaik Korea BBQ, Northbridge, WA)</h2></header>
+                    <main>
+                        <h3>Responsibilities</h3>
+                        <ul>
+                            <li>Providing excellent customer service by taking customers’ orders and preferences accurately and serving orders to customers in a timely and organized manner.</li>
+                            <li>Handling payments with cash and cards responsibly.</li>
+                            <li>Assisting with setting up the dining area before opening hours and participating in cleaning duties, keeping the dining area clean and hygienic.</li>
+                            <li>Collaborating with the kitchen, bar, and front staff to avoid any delay.</li>
+                        </ul>
+                    </main>
+                </div>
+            </div>
+            
+
+        </div>
+
+        <div class="col-1">
+            <!--<img src="images/learning.png">-->
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-solid fa-code"></i>
+            <i class="fa-brands fa-css3"></i>
+            <i class="fa-brands fa-js"></i>
+            <i class="fa-brands fa-react"></i>
+            <i class="fa-brands fa-python"></i>
+            <i class="fa-brands fa-node-js"></i>
+            <i class="fa-brands fa-codepen"></i>
+        </div>
+    </section>
+
+    <!--Portfolio-->
+    <section id="portfolio">
+        <header>
+            <h1>My Project</h1>
+        </header>
+        <main class="project-list">
+            <div class="project-item">
+                <img src="images/resume.png" alt="My reumse portfolio">
+                <div class="layer">
+                    <h2>Resume website</h2>
+                    <p>A resume containing all information about me, including my personal profile, education, skills, projects and contact details. </p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></i></a>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="images/social-app-ui.png" alt="Notebook portfolio">
+                <div class="layer">
+                    <h2>Social Media App Design</h2>
+                    <p>Mainly focus on the UI design for an social media app. It was built using React JS.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></i></a>
+                </div>
+            </div>
+        </main>       
+    </section>
+
+    <!--Contact-->
+    <section id="contact">
+        <div class="contact-container">
+            <div class="contact-left">
+                <h1>Contact</h1>
+                    <p><i class="fa-solid fa-inbox"></i> sawyuyadanar18@gmail.com</p>
+                <p><i class="fa-solid fa-phone-volume"></i> +61 431162211</p>
+                <div class="social-media">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">     
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email (myemail@gmail.com)" required>
+                    <textarea name="message" rows="5" col="5" placeholder="Leave your message here"></textarea>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+                <span id="con-msg"></span>
+
+            </div>
+        </div> 
+    </section>
+    <footer class="copyright">
+        <p>Copyright <i class="fa-regular fa-copyright"></i> 2024 Resume by Saw | All Rights Reseverd</p>
+
+    </footer>
+</body>
+</html>
